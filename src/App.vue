@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>Random site Generator</h1>
     <Randomsite/>
   </div>
 </template>
