@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card-text style="font-size: 50px; line-height: 70px">Random site Generator</v-card-text>
+    <v-card-text style="font-size: 50px; line-height: 70px">Random link Generator</v-card-text>
     <v-card-text style="font-size: 20px;"><a :href="url">{{url}}</a></v-card-text>
     <v-btn fab v-on:click="setUrl" style="width: 300px; height: 300px;"><v-icon size="100">mdi-reload</v-icon></v-btn>
   </div>
