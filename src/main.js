@@ -14,5 +14,5 @@ new Vue({
 }).$mount('#app')
 
 Vue.use(VueAnalytics, {
-  id: 'G-3316ZV1WTJ'
+  id: 'G-964MQ92E0M'
 })
