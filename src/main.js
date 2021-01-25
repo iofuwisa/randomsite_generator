@@ -7,15 +7,12 @@ import VueAnalytics from 'vue-analytics';
 
 Vue.config.productionTip = false
 
-Vue.use(VueAnalytics, {
-  id: 'G-3316ZV1WTJ'
-})
-
 new Vue({
   vuetify,
   render: h => h(App),
-  created: () => {
-    // 言語を日本語に設定
-    document.documentElement.setAttribute('lang', 'ja')
-  },
+
 }).$mount('#app')
+
+Vue.use(VueAnalytics, {
+  id: 'G-3316ZV1WTJ'
+})
