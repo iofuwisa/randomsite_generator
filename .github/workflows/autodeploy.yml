@@ -25,7 +25,6 @@ jobs:
           node-version: '14'
 
       - name: Set secret data
-      - shell: bash
         env:
           SITE_CRAWLER_API_URL: ${{ secrets.SITE_CRAWLER_API_URL }}
           SITE_CRAWLER_API_KEY: ${{ secrets.SITE_CRAWLER_API_KEY }}
