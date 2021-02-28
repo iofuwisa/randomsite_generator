@@ -23,6 +23,22 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14'
+
+      - name: Set secret data
+      - shell: bash
+        env:
+          SITE_CRAWLER_API_URL: ${{ secrets.SITE_CRAWLER_API_URL }}
+          SITE_CRAWLER_API_KEY: ${{ secrets.SITE_CRAWLER_API_KEY }}
+          LINK_PROXY_API_URL: ${{ secrets.LINK_PROXY_API_URL }}
+          LINK_PROXY_API_KEY: ${{ secrets.LINK_PROXY_API_KEY }}
+          GOOGLE_CLOUD_KEY: ${{ secrets.GOOGLE_CLOUD_KEY }}
+        run: |
+          touch src/secrets.js
+          echo "export const SITE_CRAWLER_API_URL = '$SITE_CRAWLER_API_URL';" >> src/secrets.js
+          echo "export const SITE_CRAWLER_API_KEY = '$SITE_CRAWLER_API_KEY';" >> src/secrets.js
+          echo "export const LINK_PROXY_API_URL = '$LINK_PROXY_API_URL';" >> src/secrets.js
+          echo "export const LINK_PROXY_API_KEY = '$LINK_PROXY_API_KEY';" >> src/secrets.js
+          echo "export const GOOGLE_CLOUD_KEY = '$GOOGLE_CLOUD_KEY';" >> src/secrets.js
           
       - name: Build
         run: |
