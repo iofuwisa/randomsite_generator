@@ -12,6 +12,15 @@ export default {
   name: 'Home',
   components: {
     Randomsite
+  },
+  head: {
+    title: function () {
+      return {
+        inner: "Croween",
+        separator: ' ',
+        complement: ' ',
+      }
+    }
   }
 }
 </script>
